@@ -1,0 +1,82 @@
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+      
+    background-image: url('../../../assets/images/pexels-pixasquare-1115804.jpg'); /* Add your banner image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* align-items: center; */
+    padding-top: 40px;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Overlay for better text readability */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .hero-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f4c10f; /* Yellow color for CTA */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  a{
+    text-decoration: none;
+    color:black ;
+  }
+  
+  .hero-cta:hover {
+    background-color: #e0b10e; /* Darker shade on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-heading {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subheading {
+      font-size: 1.2rem;
+    }
+  
+    .hero-cta {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }

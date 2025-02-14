@@ -1,0 +1,115 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+  
+  .navbar-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation Links Container */
+  .navbar-links-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  /* User Profile Section */
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    order: 2; /* Default: appears after links */
+  }
+  
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Navigation Links */
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #f4c10f;
+  }
+  
+  /* Hamburger Menu */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-links-container {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Start off-screen */
+      height: 100vh;
+      width: 250px; /* Adjust width as needed */
+      background-color: #333;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+      transition: right 0.3s ease-in-out; /* Smooth slide-in effect */
+      z-index: 1000;
+    }
+  
+    .navbar-links-container.active {
+      right: 0; /* Slide into view */
+    }
+  
+    .navbar-toggle {
+      display: flex;
+      z-index: 1001; /* Ensure it's above the sliding menu */
+    }
+  
+    /* Move User Profile to Top in Mobile View */
+    .user-profile {
+      order: -1;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 1rem;
+    width: 100%;
+    }
+  }
