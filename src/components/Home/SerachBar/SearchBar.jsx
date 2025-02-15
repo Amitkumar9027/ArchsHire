@@ -5,6 +5,8 @@
 import React, { useState } from "react";
 import "./SearchBar.css"; // Import the CSS file
 
+import profileImage from '../../../assets/images/profile.png'
+
 const SearchBar = ({ onSearch ,onclick}) => {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,10 +17,141 @@ const SearchBar = ({ onSearch ,onclick}) => {
     return new Promise((resolve) => {
       setTimeout(() => {
         const dummyData = [
-          { id: 1, name: "John Doe", project: "Project Alpha" },
-          { id: 2, name: "Jane Smith", project: "Project Beta" },
-          { id: 3, name: "Alice Johnson", project: "Project Gamma" },
-          { id: 4, name: "Bob Brown", project: "Project Delta" },
+          {
+            id: 1,
+            name: "John Doe",
+            expertise: "Modern Architecture",
+            rating: 4.9,
+            portfolio: "10+ Years Experience | 50+ Projects",
+            project: "Project Alpha",
+            image: profileImage,
+          },
+          {
+            id: 2,
+            name: "Jane Smith",
+            expertise: "Interior Design",
+            rating: 4.7,
+            portfolio: "8+ Years Experience | 30+ Projects",
+            project: "Project Beta",
+            image: profileImage,
+          },
+          {
+            id: 3,
+            name: "Alice Johnson",
+            expertise: "Landscape Architecture",
+            rating: 4.8,
+            portfolio: "12+ Years Experience | 40+ Projects",
+            project: "Project Gamma",
+            image: profileImage,
+          },
+          {
+            id: 4,
+            name: "Bob Brown",
+            expertise: "Urban Planning",
+            rating: 4.6,
+            portfolio: "15+ Years Experience | 60+ Projects",
+            project: "Project Delta",
+            image: profileImage,
+          },
+          {
+            id: 5,
+            name: "Emma Wilson",
+            expertise: "Sustainable Design",
+            rating: 4.9,
+            portfolio: "9+ Years Experience | 35+ Projects",
+            project: "Project Epsilon",
+            image: profileImage,
+          },
+          {
+            id: 6,
+            name: "Liam Martinez",
+            expertise: "Residential Architecture",
+            rating: 4.8,
+            portfolio: "11+ Years Experience | 45+ Projects",
+            project: "Project Zeta",
+            image: profileImage,
+          },
+          {
+            id: 7,
+            name: "Sophia Anderson",
+            expertise: "Commercial Architecture",
+            rating: 4.7,
+            portfolio: "14+ Years Experience | 55+ Projects",
+            project: "Project Eta",
+            image: profileImage,
+          },
+          {
+            id: 8,
+            name: "Noah Thomas",
+            expertise: "Industrial Design",
+            rating: 4.5,
+            portfolio: "10+ Years Experience | 48+ Projects",
+            project: "Project Theta",
+            image: profileImage,
+          },
+          {
+            id: 9,
+            name: "Olivia Roberts",
+            expertise: "Heritage Conservation",
+            rating: 4.9,
+            portfolio: "13+ Years Experience | 52+ Projects",
+            project: "Project Iota",
+            image: profileImage,
+          },
+          {
+            id: 10,
+            name: "William Scott",
+            expertise: "Furniture Design",
+            rating: 4.6,
+            portfolio: "7+ Years Experience | 28+ Projects",
+            project: "Project Kappa",
+            image: profileImage,
+          },
+          {
+            id: 11,
+            name: "Mia Lewis",
+            expertise: "Retail Design",
+            rating: 4.8,
+            portfolio: "12+ Years Experience | 50+ Projects",
+            project: "Project Lambda",
+            image: profileImage,
+          },
+          {
+            id: 12,
+            name: "James White",
+            expertise: "Urban Landscaping",
+            rating: 4.7,
+            portfolio: "10+ Years Experience | 42+ Projects",
+            project: "Project Mu",
+            image: profileImage,
+          },
+          {
+            id: 13,
+            name: "Charlotte Hall",
+            expertise: "Hospitality Design",
+            rating: 4.9,
+            portfolio: "16+ Years Experience | 65+ Projects",
+            project: "Project Nu",
+            image: profileImage,
+          },
+          {
+            id: 14,
+            name: "Benjamin Young",
+            expertise: "Public Space Design",
+            rating: 4.8,
+            portfolio: "14+ Years Experience | 55+ Projects",
+            project: "Project Xi",
+            image: profileImage,
+          },
+          {
+            id: 15,
+            name: "Amelia King",
+            expertise: "Educational Architecture",
+            rating: 4.7,
+            portfolio: "10+ Years Experience | 38+ Projects",
+            project: "Project Omicron",
+            image: profileImage,
+          },
         ];
 
         // Filter dummy data based on the query (case-insensitive)

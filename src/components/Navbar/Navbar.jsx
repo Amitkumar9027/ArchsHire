@@ -21,7 +21,7 @@ const Navbar = ({ isLoggedIn }) => {
             <span>Username</span>
           </div>
         ) : (
-          <button>Login/Signup</button>
+          <Link to="/Signup"><button>Login/Signup</button></Link>
         )}
 
         {/* Navigation Links */}
