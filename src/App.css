@@ -1,0 +1,7 @@
+.profilePopup{
+   
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    right: 20px;
+}

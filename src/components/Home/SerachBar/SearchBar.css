@@ -8,6 +8,8 @@
     width: 600px;
    
     margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     background: #fff;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -23,11 +25,13 @@
     font-size: 16px;
     outline: none;
     width: 600px;
+    color: black;
   }
   
   
   /* Search Button */
   .search-button {
+    height: 100%;
     padding: 12px 20px;
     background: #f4c10f;
     color: #333;
@@ -61,3 +65,5 @@
   .suggestions-list li{
     list-style: none;
   }
+
+

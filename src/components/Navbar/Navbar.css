@@ -28,16 +28,25 @@
     align-items: center;
     gap: 1.5rem;
   }
-  
+  .logoutButton{
+    display: none;
+  }
   /* User Profile Section */
   .user-profile {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     color: #fff;
     order: 2; /* Default: appears after links */
+    cursor:pointer;
   }
-  
+  .UserProfileName{
+    color: #fff;
+  }
+  .UserProfileName:hover{
+    color: #f4c10f;
+  }
   .profile-pic {
     width: 30px;
     height: 30px;
@@ -106,6 +115,9 @@
       order: -1;
       margin-bottom: 1rem;
     }
+    .logoutButton{
+      display: block;
+    }
   
     .navbar-links {
       flex-direction: column;
@@ -113,3 +125,50 @@
     width: 100%;
     }
   }
+
+
+
+
+  /* login and signup button */
+
+  /* Professional Auth Button Styles */
+.auth-button {
+  background-color: #f4c10f;
+  color: #333;
+  border: none;
+  padding: 0.4rem .8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-button:hover {
+  background-color: #e6b90d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.auth-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.auth-button-text {
+  white-space: nowrap;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .auth-button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+  }
+}

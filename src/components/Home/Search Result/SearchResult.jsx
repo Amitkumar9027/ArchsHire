@@ -1,12 +1,13 @@
 import React from 'react'
 import './SearchResult.css'
+import HIreButton from '../../HireButton/HIreButton';
 function SearchResult({Data,click}) {
     console.log(Data);
     console.log(click)
   return (
   <>
   {click &&
-   <div>
+   <div className='searchResults'>
       <h2>Search Results:</h2>
       {Data.length > 0 ? (
         <div className='searchContainer'>
@@ -18,7 +19,8 @@ function SearchResult({Data,click}) {
         <p className="architect-expertise">{architect.expertise}</p>
         <p className="architect-portfolio">{architect.portfolio}</p>
         <p className="architect-rating">⭐ {architect.rating}</p>
-        <button className="hire-button">Hire Now</button>
+        <HIreButton/>
+        
       </div>
     </div>
   ))}

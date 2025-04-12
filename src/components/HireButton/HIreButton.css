@@ -1,0 +1,15 @@
+.hire-button {
+    background: #f4c10f;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .hire-button:hover {
+    background: #e0ac0f;
+  }

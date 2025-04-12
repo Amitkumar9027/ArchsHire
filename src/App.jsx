@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar/Navbar'
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Contacts from './components/Contacts/Contacts';
-import Signup from './components/Login&Signup/Signup';
-import Login from './components/Login&Signup/Login';
+// App.jsx
+import { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
+import AppContent from './components/AppContent'; // Extracted for clarity
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [PopUpOpen, setPopupOpen] = useState(false);
+
+  const popupHandler = (value) => {
+    setPopupOpen(value);
+  };
 
   return (
-    <>
     <Router>
-    <Navbar isLoggedIn={isLoggedIn}/>
-
-    <Routes>
-      < Route path='/' element={<Home/>}/>
-      < Route path='/About' element={<About/>}/>
-      < Route path='/Contacts' element={<Contacts/>}/>
-      <Route path='/Signup' element={<Signup/>}/>
-      <Route path='/Login' element={<Login/>}/>
-    </Routes>
+      <AppContent
+        isLoggedIn={isLoggedIn}
+        popupHandler={popupHandler}
+        PopUpOpen={PopUpOpen}
+        setPopupOpen={setPopupOpen}
+      />
     </Router>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

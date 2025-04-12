@@ -1,6 +1,8 @@
 import React from "react";
 import "./Architects.css"; // Import CSS file
 import profileImage from '../../../assets/images/profile.png'
+import HIreButton from '../../HireButton/HIreButton';
+import { useNavigate } from "react-router-dom";
 
 // Dummy architect data (can be fetched from API in the future)
 const architects = [
@@ -30,12 +32,19 @@ const architects = [
   },
 ];
 
+const handleHire = () => {
+  navigate(`/hire/${architect.id}`, { state: { architect } });
+};
+
+
+const navigate=useNavigate();
 const Architects = () => {
   return (
     <section className="architects-section">
       <h2 className="section-title">Top Rated Architects</h2>
       <div className="architects-container">
         {architects.map((architect) => (
+          
           <div key={architect.id} className="architect-card">
             <img src={architect.image} alt={architect.name} className="architect-image" />
             <div className="architect-info">
@@ -43,7 +52,7 @@ const Architects = () => {
               <p className="architect-expertise">{architect.expertise}</p>
               <p className="architect-portfolio">{architect.portfolio}</p>
               <p className="architect-rating">⭐ {architect.rating}</p>
-              <button className="hire-button">Hire Now</button>
+              <HIreButton onClick={()=> handleHire(architect)}/>
             </div>
           </div>
         ))}
